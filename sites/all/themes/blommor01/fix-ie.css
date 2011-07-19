@@ -1,0 +1,20 @@
+/* $Id: fix-ie.css,v 1.1.4.1 2009/04/21 07:55:10 frjo Exp $ */
+
+#body-wrapper {
+  font-size: 0.75em; /* 16px x 0.75 = 12px */
+}
+* html body {
+  width: 800px;
+}
+.clear-block,
+#top-nav,
+#header,
+#footer {
+  height: 1%;
+}
+#content-both #sidebar-left {
+  left: 200px; /* RC fullwidth */
+}
+#content-left #sidebar-left {
+  left: 10px; /* LC left margin */
+}

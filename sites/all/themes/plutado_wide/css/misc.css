@@ -1,0 +1,42 @@
+#content-region-both h2 {
+	margin: 0px;
+	text-decoration: none;
+}
+
+	#content-region-both h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+	#content-region-both h2 a:hover {
+		color: #E5E5E5;
+		text-decoration: none;
+	}
+
+#content-region-none h2 {
+	margin: 0px;
+}
+
+	#content-region-none h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+
+#content-region-left h2 {
+	margin: 0px;
+}
+
+	#content-region-left h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+#content-region-right h2 a {
+	margin: 0px;
+}
+
+	#content-region-right h2 a {
+		color: #000000;
+		text-decoration: none;
+	}

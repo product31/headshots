@@ -1,0 +1,13 @@
+name = "Service Links Share"
+description = "Provide the integration between Service Links and Share module"
+core = 6.x
+package = Share - tabs
+dependencies[] = service_links
+dependencies[] = share
+dependencies[] = share_widget
+; Information added by drupal.org packaging script on 2011-06-25
+version = "6.x-2.x-dev"
+core = "6.x"
+project = "service_links"
+datestamp = "1309004527"
+

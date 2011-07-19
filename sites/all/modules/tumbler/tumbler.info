@@ -1,0 +1,4 @@
+; $Id:$
+name = Tumbler API
+description = Provides functions to post to and read from Tumblr.com's APIs.
+core = 6.x

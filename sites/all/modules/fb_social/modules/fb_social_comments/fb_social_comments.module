@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * Implementation of hook_block
+ */
+function fb_social_comments_block($op = 'list', $delta = 0, $edit = array()){
+  // load all presets
+  $presets = fb_social_enabled_presets('comments');
+  
+  if ($op == 'list') {
+    foreach ( $presets as $preset ) {
+      if ($preset->settings['block']) {
+        $blocks[$preset->name] = array(
+            'info' => $preset->name . ' block' 
+        );
+      }
+    }
+    return $blocks;
+  }
+  
+  else if ($op == 'view') {
+    $block['subject'] = t('');
+    $preset = fb_social_preset_load($name = $delta, $reset = FALSE);
+    $url = fb_social_url($_GET['q']);
+    $block['content'] = theme('fb_social_preset', array(
+      'preset' => $preset, 
+      'extra' => array(
+          'href' => $url 
+      ) 
+    ));
+    return $block;
+  }
+}
+
+/**
+ * Implementation of hook_content_extra_fields.
+ */
+function fb_social_comments_content_extra_fields($type_name){
+  $presets = fb_social_enabled_presets('comments');
+  
+  foreach ( $presets as $preset ) {
+    if (fb_social_comments_type($preset, $type_name)) {
+      $extras['fb_social_comments_' . $preset->name] = array(
+          'label' => t('Facebook social:  comments plugin'), 
+          'description' => t('The "comments" plugin field from ' . $preset->name . ' preset'), 
+          'weight' => 20  //sink down
+      );
+      return $extras;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function fb_social_comments_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
+  switch ($op) {
+    case 'view' :
+      $presets = fb_social_enabled_presets('comments');
+     
+      foreach ( $presets as $preset ) {
+        if ($node->status && fb_social_comments_type($preset, $node->type)) {
+          if ($a4) { //only in page view
+            $preset_name['preset'] = $preset;
+            $output = theme('fb_social_preset', $preset_name, array(
+                'href' => fb_social_url('node/' . $node->nid)
+            ));
+            $weight = (module_exists('content')) ? content_extra_field_weight($node->type, 'fb_social_comment_' . $preset->name) : - 10;
+            $node->content['fb_social_comment_' . $preset->name] = array(
+                '#weight' => $weight,
+                '#value' => $output
+            );
+          }
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Implementation of hook fb_social_plugins_info
+ */
+function fb_social_comments_fb_social_plugins_info(){
+  $info = array();
+  $info['comments'] = array(
+      'name' => 'comments', 
+      'description' => 'comments plugin' 
+  );
+  
+  return $info;
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function fb_social_comments_ctools_plugin_api($module, $api){
+  if ($module == 'boxes' && $api == 'plugins') {
+    return array(
+        'version' => 1 
+    );
+  }
+}
+
+/**
+ * Implementation of hook_boxes_plugins().
+ */
+function fb_social_comments_boxes_plugins(){
+  $info = array();
+  
+  $info['fb_social_comments_boxes_comments'] = array(
+      'title' => 'facebook social comments', 
+      'handler' => array(
+          'class' => 'fb_social_comments_box', 
+          'file' => 'fb_social_comments_boxes.inc', 
+          'path' => drupal_get_path('module', 'fb_social_comments'), 
+          'parent' => 'fb_social_boxes_default' 
+      ) 
+  );
+  
+  return $info;
+}
+
+/**
+ * Does $preset should be shown on node of type $type
+ */
+function fb_social_comments_type($preset, $type){
+  $types = ($preset->settings['node_types']['types']);
+  if (! is_array($types)) {
+    return FALSE;
+  }
+  
+  return in_array($type, array_values($types));
+}
+

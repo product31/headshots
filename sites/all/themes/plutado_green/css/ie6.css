@@ -1,0 +1,183 @@
+#content-region-left {
+	margin-top: -10px;	
+	margin-bottom: 0px;
+}
+
+#content-region-right {
+	margin-top: -10px;	
+	margin-bottom: 0px;
+}
+
+#content-region-both {
+	margin-top: -10px;	
+	margin-bottom: 0px;
+}
+
+#content-region-none {
+	margin-top: -10px;	
+	margin-bottom: 0px;
+}
+
+#custom-login {
+	top: 0px; 
+}
+
+#logo-name {
+	position: relative;
+	top: 0px;	
+}
+
+#logo-name #site-name {
+	position: relative;
+	top: 20px;
+}
+
+.meta {
+	padding-bottom: 10px;
+}
+
+.node-content {
+	margin-top: 0px;
+}
+
+#primary .last { 
+	padding-top: 0px;
+}
+
+#site-name-slogan {
+	position: relative;
+	top: 30px;
+}
+
+#site-slogan {
+	position: relative;
+	top: 0px;
+}
+
+#search-slogan {
+	position: relative;
+	top: 50px;
+}
+
+#secondary {
+	position: relative;
+	height: 0px;
+	top: -110px;
+	float: left;
+}
+
+		.secondary {
+		position: relative;
+		height: 20px;
+		top: -10px;
+		margin-bottom: -15px;
+	}
+
+#sidebar-left-region {
+	margin-left: 7px;
+	
+}
+
+#sidebar-left-region .block-header {
+	position: relative;
+	top: 2px;
+	margin-bottom: -30px;
+	
+}
+
+#sidebar-left-region .block-footer {
+	margin-bottom: -12px;
+}
+
+#sidebar-right-region .block-header {
+	margin-bottom: -30px;
+	position: relative;
+	top: 2px;
+}
+
+#sidebar-right-region .block-footer {
+	margin-bottom: -13px;
+}
+
+#site-name a {
+	position: relative;
+	font-size: 15px !important;
+}
+
+#site-logo {
+	position: relative;
+	top: 30px;
+}
+
+span.submitted { /* ie7 */
+	position: relative;
+	top: 0px;
+}
+
+#search-button {
+	position: relative;
+	left: 0px;
+	top: -3px;
+	display: inline;
+}
+
+#search-field input {
+	text-indent: 25px;
+	padding-top: 13px;
+}	
+			
+#search-label {
+	position: relative;
+	top: -12px;
+	display: inline;
+	font-size: x-small;
+}
+
+#sidebar-left-region {
+	margin-top: -10px;
+}
+
+#sidebar-right-region {
+	margin-top: -10px;
+}
+
+ul.primary {
+	margin-top: 10px;
+}
+
+#primary {
+	position: relative;
+	top: 5px;
+}
+
+/* top level links */
+#nav a {
+	display: inline-block;
+}
+
+#breadcrumbs {
+	position: relative;
+	background: #12541F url(images/breadcrumbs-bg.png);
+	top: 0px;
+	padding: 0px 15px 0px 15px;
+	margin: 5px;
+	height: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	text-transform: uppercase;
+}
+
+.block {
+	position: relative;
+	top: 0px;
+}
+
+#main-wrapper {
+	position: relative;
+	top: 0px;
+}
+
+#main-wrapper-bottom {
+	position: relative;
+	top: 0px;
+}

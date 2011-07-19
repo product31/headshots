@@ -1,0 +1,49 @@
+/* $Id: blommor.css,v 1.3.2.1 2008/09/12 21:23:41 frjo Exp $ */
+
+body {
+  background: #000 url(images/background_red.png) fixed;
+}
+#site-name a:hover {
+  color: #ffff00;
+}
+
+a:link {
+  color: #ffff00;
+}
+a:visited {
+  color: #cccc00;
+}
+a:hover {
+  color: #ffff00;
+}
+.tabs a:link, .tabs a:visited {
+  color: #c1272d;
+}
+.tabs a.active {
+  color: #000;
+}
+
+.form-text, .form-password, .textarea, .form-file, select {
+  border: 1px solid #c1272d;
+}
+
+h2.nodetitle {
+  border-bottom: solid 2px #c1272d;
+}
+
+tr.even td a, tr.odd td a {
+  color: #c1272d;
+}
+
+#mission {
+  background: transparent url(images/opacity_r_75.png);
+}
+#footer {
+  background: transparent url(images/opacity_r_75.png);
+}
+.pager a:hover {
+  color: #c1272d;
+}
+.pager li.pager-current {
+  background: transparent url(images/opacity_r_75.png);
+}

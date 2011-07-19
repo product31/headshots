@@ -1,0 +1,151 @@
+#content-region-both h2 {
+	margin: 0px;
+	text-decoration: none;
+}
+
+	#content-region-both h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+	#content-region-both h2 a:hover {
+		color: #E5E5E5;
+		text-decoration: none;
+	}
+
+#content-region-none h2 {
+	margin: 0px;
+}
+
+	#content-region-none h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+
+#content-region-left h2 {
+	margin: 0px;
+}
+
+	#content-region-left h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+#content-region-right h2 a {
+	margin: 0px;
+}
+
+	#content-region-right h2 a {
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	
+/*
+ * Primary & secondary links 
+ */
+
+#idPrimaryLinks, #idSecondaryLinks { display:block; }
+
+ul.primary-links, ul.secondary-links {
+  text-align:center;
+  margin:0;
+  padding:0; 
+}
+
+ul.primary-links { }
+ul.secondary-links { margin-top:0; } /* HAVE to be positive, because IE7 gets confused by negative margin */
+
+/* IE fix - setting display to inline-block sets hasLayout to true and than we reset it back, while hasLayout stays true 
+   This fixes bug with resizing in IE.*/
+ul.primary-links li, ul.secondary-links li, ul.suckerfish-primary li {
+  display:inline-block;
+  padding:0;
+  margin:0;
+}
+ul.primary-links li, ul.secondary-links li, ul.suckerfish-primary li { display:inline; }
+
+#idPrimaryLinks ul li a, #idSecondaryLinks ul li a {
+  display: inline;
+  margin: 0 0 0 0;
+  padding:0.35em 0.75em;
+}
+
+/*
+ * Suckerfish
+ */
+
+#idSuckerfish {
+  display:block;
+}
+
+#idSuckerfish ul {
+  min-height:1.4em; /* has to be set as min-height, since IE */
+}
+
+ul.suckerfish-primary {
+  text-align:left;
+  margin:0 0 0 -0.3em;
+  padding:0;
+}
+
+ul.suckerfish-primary li {
+  display:block;
+  float:left;
+  position:relative;
+  list-style-type:none;
+  list-style-image:none;
+}
+
+ul.suckerfish-primary li a {
+  display:block;
+  float:left;
+  position:relative;
+  text-decoration:none;
+  border-bottom:solid 1px transparent; /* Opera li/a size fix, color needs to be something instead of transparent for IE6 */
+}
+
+ul.suckerfish-primary li a {
+  margin:0 1em 0 0;
+  padding:1px 0.3em 1px 0.3em;
+}
+
+ul.suckerfish-primary li:hover a, ul.suckerfish-primary li.submenu a:hover, ul.suckerfish-primary li.submenu a:hover a {
+  border-bottom:0; /* Opera li/a size fix */
+  margin-bottom:1px; /* compensate for border-bottom Opera fix */
+}
+
+ul.suckerfish-primary li div.suckerfish-secondary-wrapper {
+  visibility:hidden;
+  overflow:hidden;
+  position:absolute; top:1.2em; left:-0.3em;
+  padding:0;
+  margin:0.4em 0.3em;
+  /*border-top:solid 6px;*/ /* 7px border #idSuckerfish - 1px a (Opera fix) border */
+  border-top:dotted 1px; border-right:solid 1px; border-bottom:solid 7px; border-left:solid 1px;
+  width:12em;
+  background:#ffffff; /* default is transparent, needs it set to anything*/
+}
+
+ul.suckerfish-primary li table {
+  margin:-1px;
+  border:0;
+  border-collapse: collapse;
+}
+
+ul.suckerfish-primary li table th, ul.suckerfish-primary li table td {
+  border:0;
+}
+
+ul.suckerfish-primary li:hover div.suckerfish-secondary-wrapper, ul.suckerfish-primary li a:hover div.suckerfish-secondary-wrapper {
+  visibility:visible;
+}
+
+div.suckerfish-secondary-wrapper li { padding-left:0.3em; }
+
+div.suckerfish-secondary-wrapper li, div.suckerfish-secondary-wrapper li a {
+  display:block;
+  width:12em;
+}
+	

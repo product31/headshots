@@ -1,0 +1,11 @@
+; $Id:$
+name = Custom Module
+description = Custom Enhancements for drupal site.
+package = Custom
+core = 6.x
+
+version = "6.x-1.1"
+core = "6.x"
+project = "Custom"
+datestamp = "1263403507"
+

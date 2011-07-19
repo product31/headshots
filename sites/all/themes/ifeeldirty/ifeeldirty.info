@@ -1,0 +1,18 @@
+; $Id: ifeeldirty.info,v 1.1.2.1 2008/02/16 16:40:26 eaton Exp $
+name = I Feel Dirty
+description = A clean but dirty template by http://studio.st/
+core = 6.x
+engine = phptemplate
+regions[header] = Header
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[footer_left] = Footer left
+regions[footer_right] = Footer right
+stylesheets[all][] = style.css
+
+; Information added by drupal.org packaging script on 2008-02-16
+version = "6.x-1.0"
+core = "6.x"
+project = "ifeeldirty"
+datestamp = "1203184208"
+

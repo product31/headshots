@@ -1,0 +1,294 @@
+/*
+
+Table structure
+---------------
+
+table.goofy
+  thead (only if rows exist)
+    tr.ht
+      td.htl
+      td.htc colspan=n
+      td.htr
+    tr.hm
+      td.hml
+      n * th
+      td.hmr
+    tr.hb[s]
+      td.hbl
+      td.hbc colspan=n
+      td.hbr
+  tbody (only if rows exist)
+    tr.rt[s]
+      td.rtl
+      td.rtc colspan=n
+      td.rtr
+    tr.rm
+      td.rml
+      n * td
+      td.rmr
+    tr.rb
+      td.rbl
+      td.rbc
+      td.tbr
+      
+- [s]: Separate on lone header bottom/data top only
+  
+Default palette:
+- background: white
+- foreground: black
+- headers: #FBC636
+- links: #804000
+- special links: #f00000
+- zebra: even: #E4E4E4 / odd: #C6C6C6
+- hr: #400000
+*/
+
+table.goofyo
+  {
+  width: 100%;
+  cell-padding: 0;
+  cell-spacing: 0;
+  border-collapse: collapse;
+  empty-cells: show;
+  }
+
+tbody
+  {
+  border-top:none; /* Override system.css */
+  }
+tr.even, tr.odd
+  {
+  border-bottom:none; /* Override system.css */
+  }
+    
+table.goofyo td, table.goofyo th
+  {
+  background-color: #EEEEEE;
+  }
+
+/**
+ * The header rows, top left to bottom right
+ */
+table.goofyo td.htl
+  {
+  border: none;
+  background: url(images/or-ul.png) no-repeat bottom right; 
+  width: 17px;
+  height: 17px;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+  }      
+table.goofyo td.htc
+  {
+  border:  none;
+  background: url(images/or-u.png) repeat-x bottom left;
+  margin: 0;
+  padding: 0;
+  }
+ 
+table.goofyo td.htc img
+  {
+  width: 100%;
+  height: 17px;
+  }
+  
+table.goofyo td.htr
+  {
+  border:  none;
+  background: url(images/or-ur.png) no-repeat bottom left;
+  width: 17px;
+  height: 17px;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+  }      
+
+table.goofyo td.hml
+  {
+  border: none;
+  background: url(images/or-l.png) repeat-y top right;
+  margin: 0;
+  padding: 0;
+  }
+   
+table.goofyo tr.hm th.hmc
+  {
+  border: none;
+  background: #FBC636;
+  text-align: center;
+  font-weight: bold; 
+  }
+
+table.goofyo tr.hm td.hmc
+  {
+  border: none;
+  background: #FBC636;
+  text-align: left;
+  font-weight: normal; 
+  }
+
+table.goofyo td.hmr
+  {
+  border:  none;
+  background: url(images/or-r.png) repeat-y top left;
+  margin: 0;
+  padding: 0;
+  }
+
+table.goofyo tr.hb
+  {
+  height: 5px;
+  }
+
+table.goofyo td.hbl
+  {
+  border:  none;
+  background: url(images/or-l.png) repeat-y top right;
+  margin: 0;
+  padding: 0;
+  }      
+
+table.goofyo td.hbc
+  {
+  border:  none;
+  background: url(images/or-d.png) repeat-x top left;
+  margin: 0;
+  padding: 0;
+  }
+  
+table.goofyo td.hbr
+  {
+  border:  none;
+  background: url(images/or-r.png) repeat-y top left;
+  margin: 0;
+  padding: 0;
+  }
+        
+table.goofyo tr.hbs
+  {
+  height: 17px;
+  }
+table.goofyo tr.hbs td.hbl
+  {
+  background: url(images/or-dl.png) no-repeat top right;
+  }  
+table.goofyo tr.hbs td.hbr
+  {
+  background: url(images/or-dr.png) no-repeat top left;
+  }   
+
+/**
+ * The data rows, top left to bottom right
+ */
+table.goofyo tr.rts
+  {
+  height: 17px;
+  }
+table.goofyo tr.rts td.rtl
+  {
+  background: url(images/lg-ul.png) no-repeat bottom right;
+  }
+table.goofyo tr.rts td.rtr
+  {
+  background: url(images/lg-ur.png) no-repeat bottom left;
+  }
+
+table.goofyo tr.rt
+  {
+  height: 4px;
+  }
+
+table.goofyo td.rtl
+  {
+  border:  none;
+  background: url(images/lg-l.png) repeat-y bottom right;
+  width: 17px;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  }      
+
+table.goofyo td.rtc
+  {
+  border:  none;
+  background: url(images/lg-u.png) repeat-x bottom left;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  }
+ 
+table.goofyo td.rtr
+  {
+  border:  none;
+  background: url(images/lg-r.png) repeat-y bottom left;
+  width: 17px;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  }      
+
+/**
+ * The "redundant" tr.odd selector is here to increase selectivity
+ * and force the background over the one in table.goofyo tr.odd td
+ */
+table.goofyo td.rml,
+table.goofyo tr.odd td.rml
+  {
+  border:  none;
+  background: transparent url(images/lg-l.png) repeat-y center right;
+  margin: 0;
+  padding: 0;
+  }
+   
+table.goofyo td
+  {
+  border: none;
+  background: #E4E4E4;
+  /* height: 5px; */
+  padding: 0 0.2em;
+  }
+  
+table.goofyo tr.odd td
+  {
+  background: #C6C6C6;
+  }
+
+table.goofyo td.rmr,
+table.goofyo tr.odd td.rmr  
+  {
+  border:  none;
+  background: url(images/lg-r.png) repeat-y center left;
+  margin: 0;
+  padding: 0;
+  }
+ 
+table.goofyo td.rbl
+  {
+  border:  none;
+  background: url(images/lg-dl.png) no-repeat top right;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  }      
+
+table.goofyo td.rbc
+  {
+  border:  none;
+  background: url(images/lg-d.png) repeat-x top left;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  }
+  
+table.goofyo td.rbr
+  {
+  border:  none;
+  background: url(images/lg-dr.png) no-repeat top left;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  }      
+

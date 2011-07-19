@@ -1,0 +1,36 @@
+.node-form .standard { /* override of default node.css file (node.module) */
+	clear: none; 
+}
+
+div.admin .left {
+	float: left;
+	width: 47%;
+}
+
+div.admin .right {
+	float: right;
+	width: 47%;
+}
+
+.profile {
+	clear: none;
+	padding-bottom: 20px;
+	margin-bottom: -1px;
+}
+
+#credits {
+	width: 200px;
+	float: left;
+	font-size: x-small;
+}
+
+#credits a {
+	color: #666666;
+	text-decoration: none;
+}
+
+#credits img {
+	position: relative;
+	top: -3px;
+	float: left;
+}

@@ -1,0 +1,8 @@
+; $Id $
+name = fb_events
+description = FB Events API integration for Drupal sites
+core = 6.x
+package = "Facebook Social Plugins"
+core = "6.x"
+
+dependencies[] = fb_social

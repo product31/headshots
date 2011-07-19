@@ -1,0 +1,96 @@
+/**
+ * Overall styles
+ */
+
+.filefield-icon img {
+  display: inline;
+}
+
+/**
+ * Clear the filefield-icon float, or any other floats
+ * that custom widgets might have inserted but not cleared.
+ * Stolen from "How To Clear Floats Without Structural Markup",
+ * http://www.positioniseverything.net/easyclearing.html
+ */
+.filefield-item:after, .filefield-file-edit:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* Hides from IE-mac \*/
+* html .filefield-item, .filefield-file-edit {height: 1%;}
+/* End hide from IE-mac */
+
+/* End overall styles */
+
+/**
+ * Formatter styles
+ */
+
+.filefield-item .filefield-icon {
+  float: left;
+  margin-right: 0.4em;
+}
+
+/* End formatter styles */
+
+/**
+ * General widget form styles (applicable to all widgets)
+ */
+
+.filefield-file-edit-flags {
+  float: right;
+  text-align: right;
+  margin-bottom: -4px; /* The "List" checkbox has too much bottom margin */
+}
+
+.filefield-file-edit-widget {
+  width: 90%;
+}
+
+/* Only applies to single-value fields, for which we provide our own table. */
+.filefield-file-container-table {
+  width: 90%;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.filefield-file-upload {
+  margin-bottom: 5px;
+}
+
+.filefield-js-error {
+  /* For some reason, the JS error message doesn't wrap by default. */
+  white-space: normal;
+}
+
+/* End general widget form styles */
+
+/**
+ * Generic file edit widget styles. Not applicable to other widgets that
+ * might hook into filefield (say, a widget with an image preview).
+ */
+
+.filefield-generic-edit .filefield-icon {
+  float: left;
+  margin-right: 0.7em;
+  margin-top: 0.3em;
+}
+
+.filefield-generic-edit-description {
+  margin-right: 6em;
+}
+
+/* The text field is made unnecessarily long by node.css - shorten it */
+.filefield-generic-edit .form-text {
+  width: 100%;
+}
+.filefield-generic-edit .description {
+  white-space: normal;
+  margin-bottom: 0;
+  overflow: auto; /* indent on line wraps, don't float around the icon */
+}
+
+/* End widget form styles */

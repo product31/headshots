@@ -1,0 +1,46 @@
+h1 { }
+
+h2 {
+}
+
+	h2.content-title { /* ie7 */
+		margin: 5px 5px 0px 0px;
+		font-size: 16px;
+	}
+
+h3 { }
+
+h4 { }
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+.node-content h2 a {
+	font-size: 16px;
+}
+
+ul.menu { }
+
+ul.menu a {
+	text-decoration: none;
+	color: #000000;
+}
+
+ul.menu a.active {
+	text-decoration: none;
+	color: #666666;
+}
+
+ul.menu a:hover {
+	text-decoration: underline;
+}
+
+tr.even, tr.info {
+	background-color: #EDF5FA;
+}
+
+tr.odd {
+	background-color: #D3E7F4;
+}

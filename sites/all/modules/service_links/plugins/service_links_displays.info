@@ -1,0 +1,13 @@
+name = "Service Links Displays"
+description = "Provide the integration between Service Links and Node Displays (Display Suite)"
+core = 6.x
+package = Display suite
+dependencies[] = service_links
+dependencies[] = nd
+
+; Information added by drupal.org packaging script on 2011-06-25
+version = "6.x-2.x-dev"
+core = "6.x"
+project = "service_links"
+datestamp = "1309004527"
+

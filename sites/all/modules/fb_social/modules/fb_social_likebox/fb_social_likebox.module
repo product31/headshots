@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implementation of hook fb_social_plugins_info
+ */
+function fb_social_likebox_fb_social_plugins_info(){
+  $info = array();
+  $info['likebox'] = array(
+      'name' => 'likebox', 
+      'description' => 'Likebox', 
+  );
+  return $info;
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function fb_social_likebox_ctools_plugin_api($module, $api){
+  if ($module == 'boxes' && $api == 'plugins') {
+    return array(
+        'version' => 1 
+    );
+  }
+}
+
+/**
+ * Implementation of hook_boxes_plugins().
+ */
+function fb_social_likebox_boxes_plugins(){
+  $info = array();
+  
+  $info['fb_social_likebox_boxes_like'] = array(
+      'title' => 'facebook social like-box', 
+      'handler' => array(
+          'class' => 'fb_social_likebox_box', 
+          'file' => 'fb_social_likebox_boxes.inc', 
+          'path' => drupal_get_path('module', 'fb_social_likebox'), 
+          'parent' => 'fb_social_boxes_default' 
+      ) 
+  );
+  
+  return $info;
+}
+

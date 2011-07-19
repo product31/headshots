@@ -1,0 +1,632 @@
+/* $Id: style.css,v 1.3.2.2 2009/04/21 07:55:10 frjo Exp $ */
+
+body {
+  color: #fff;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 100%; /* Fixes exaggerated text resizing in IE6 and IE7 */
+  min-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Make the admin pages as wide as necessary. */
+body.page-admin {
+  min-width: 0;
+  max-width: 10000px;
+}
+
+#body-wrapper {
+  font-size: 0.875em; /* 16px x 0.875 = 14px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3, h4, h5, h6 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 1em;
+  background: #eee;
+  padding: 0.75em 1.5em;
+  border: 1px solid #ddd;
+}
+
+blockquote {
+  background: url(blockquote.png) no-repeat 0% 0%;
+  padding-left: 30px;
+  margin-left: 0;
+  font-style: italic;
+}
+
+/* Header */
+
+#header {
+  background: transparent;
+}
+#logo {
+  float: left;
+  padding: 4px 15px 4px 0;
+}
+#site-name {
+  margin: 0;
+  padding-top: 15px;
+  font-size: 2.5em;
+}
+#site-name a:link,
+#site-name a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+#site-name a:hover {
+  text-decoration: none;
+}
+#site-slogan {
+  float: left;
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  margin: 5px 0 2px 0;
+}
+
+/* Search */
+
+#search {
+  position: absolute;
+  right: 0;
+  padding-top: 10px;
+  white-space: nowrap;
+}
+#search .form-text {
+  font-size: 1em;
+  margin-right: 5px;
+}
+#search .form-submit {
+  font-size: 1em;
+  margin: 0;
+}
+.search-results .search-info {
+  color: #999;
+}
+.search-results strong {
+  background: #fdf6B9;
+}
+
+/* Navigation */
+
+ul#primary {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#primary li {
+  float: left;
+  margin-right: 5px;
+}
+#primary a:link,
+#primary a:visited,
+#primary a:hover,
+#primary a:active {
+  display: block;
+  background: transparent url(images/opacity_80.png);
+  color: #fff;
+  font-family: "Andale Mono", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  margin-top: 10px;
+  padding: 2px 6px;
+  text-decoration: none;
+}
+#primary a:hover,
+#primary a.active {
+  font-size: 3em;
+  margin-top: 0;
+}
+ul#secondary {
+  display: none;
+}
+
+/* Admin Styles */
+
+.page-admin #main2 {
+  background: transparent url(images/opacity_90.png);
+  padding: 0.5em;
+}
+div.admin .compact-link {
+  margin: 0 0 1em 1em;
+}
+div.admin .compact-link a {
+  background: transparent url(images/opacity_90.png);
+  margin-bottom: 1em;
+  padding: 0.2em 0.3em;
+}
+div.admin .compact-link a:hover {
+  background: transparent url(images/opacity_60.png);
+  text-decoration: none;
+}
+div.admin-panel {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+div.admin-panel .body {
+  background: transparent url(images/opacity_90.png);
+  padding: 0.5em;
+}
+div.admin-panel h3 {
+  background: transparent url(images/opacity_90.png);
+  color: #fff;
+  margin: 0;
+  padding: 0.2em 0.5em;
+}
+div.admin-panel dt a {
+  font-weight: bold;
+}
+div.admin-panel dd,
+div.admin-panel .description {
+  color: #bbb;
+  margin-bottom: 0.5em;
+}
+div.admin-panel dd {
+  margin-left: 1.5em;
+}
+div.admin-panel ul {
+  padding-left: 1em;
+}
+div.admin-panel .item-list ul{
+  padding-left: 0;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.breadcrumb a:link,
+.profile a:link,
+.meta a:link,
+.submitted a:link,
+.block a:link,
+.links a:link {
+  color: #fff;
+}
+.breadcrumb a:visited,
+.profile a:visited,
+.meta a:visited,
+.submitted a:visited,
+.block a:visited,
+.links a:visited {
+  color: #fff;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: #f00;
+  text-decoration: underline;
+}
+#block-user-1 a:visited {
+  color: #fff;
+}
+#block-user-1 a.active {
+  color: #eee;
+}
+th a:link, th a:visited {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Form styles */
+
+fieldset {
+  border: 1px solid #fff;
+}
+.attachments #edit-upload {
+  background: transparent;
+  color: #fff;
+}
+html.js fieldset.collapsible legend a {
+  color: #fff;
+  background: url(images/menu-expanded.png) 5px 75% no-repeat;
+}
+html.js fieldset.collapsed legend a {
+  color: #fff;
+  background-image: url(images/menu-collapsed.png);
+}
+
+/* Node, comment and title styles */
+
+.node,
+.node-form,
+.comment,
+#comments .box,
+h2.nodetitle {
+  background: transparent url(images/opacity_85.png);
+}
+.node {
+  padding: 0.7em;
+}
+h2.title {
+  color: #fff;
+  font-size: 1.7em;
+  font-weight: bold;
+  margin: 0 auto 0.5em auto;
+}
+h2.nodetitle {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 2px;
+  margin: 0 auto 0 auto;
+}
+.node h2.nodetitle {
+  background: transparent;
+}
+h2.withtabs {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+h2.nodetitle a {
+  color: #fff;
+}
+h2.nodetitle a:hover {
+  text-decoration: none;
+  color: #999;
+}
+.meta {
+  margin-top: 2px;
+}
+.submitted {
+  display: inline;
+  color: #999;
+}
+.terms {
+  display: inline;
+  color: #999;
+  margin-left: 0.5em;
+}
+.links {
+  color: #999;
+}
+.read-more {
+  font-weight: bold;
+}
+.sticky {
+  background: #5a5050;
+  padding: 0.5em;
+  border: solid 1px #ddd;
+}
+.comment {
+  padding: 0.7em;
+}
+.comment h3.title {
+  font-size: 1.2em;
+  margin: 0;
+}
+.comment h3.title a {
+  color: #fff;
+}
+.comment .new {
+  float: right;
+  position: relative;
+  font-weight: bold;
+  color: red;
+}
+.comment .links ul {
+  display: inline;
+}
+.preview .node, .preview .comment {
+  background-color: #000;
+}
+
+/* Block styles */
+
+.block {
+  background: transparent url(images/opacity_90.png);
+  padding: 0.5em;
+}
+td.block {
+  background: transparent;
+  padding: 0;
+}
+.block h2 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 0.5em 0;
+}
+.block .item-list ul li {
+  margin: 0 0 0.25em 0.5em;
+  list-style-image: url(bullet.png);
+}
+.block-block .content ul {
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+.block-block .content ul li {
+  margin: 0 0 0.25em 1.5em;
+  padding: 0;
+}
+
+/* Box styles */
+
+.box {
+  background: transparent;
+  padding: 5px;
+}
+.box h2 {
+  font-size: 1.2em;
+  margin: 0 0 0.5em 0;
+}
+
+#mission {
+  padding: 15px;
+  color: #fff;
+}
+#mission a, #mission a:visited {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#footer {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+#footer a, #footer a:visited {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Tabs, make them wrap */
+
+ul.primary {
+  padding: 0;
+  border-bottom: none;
+}
+
+ul.primary li {
+  float: left;
+  margin: 0.2em 0;
+  border-bottom: 1px solid #bbb;
+}
+
+ul.primary li a {
+  margin: 0 0.5em;
+}
+
+/* Tables */
+
+table {
+  font-size: 1em; /* make <td> sizes relative to body size! */
+  margin: 0.5em 0;
+  width: 100%;
+}
+thead th {
+  border-bottom: 2px solid #d3e7f4;
+  color: #eee;
+  font-weight: bold;
+  padding: 0.3em 0.5em;
+}
+
+tr.even td, tr.odd td,
+tr.even th, tr.odd th {
+  color: #000;
+}
+tr.even td, tr.odd td {
+  padding: 0.3em 0.5em;
+}
+
+tr.even, tr.odd, tbody th {
+  border: solid #d3e7f4;
+  border-width: 1px 0;
+}
+
+tr.odd, tr.info {
+  background: #edf5fa;
+}
+
+tr.even {
+  background: #fff;
+}
+
+tr.odd td.active {
+  background: #ddecf5;
+}
+
+tr.even td.active {
+  background: #e6f1f7;
+}
+
+td.region, td.module, td.container {
+  border-top: 1.5em solid #fff;
+  border-bottom: 1px solid #b4d7f0;
+  background: #d4e7f3;
+}
+td.region a, td.module a, td.container a {
+  font-weight: bold;
+}
+
+tr:first-child td.region, tr:first-child td.module, tr:first-child td.container {
+  border-top-width: 0;
+}
+
+/* Menu styles */
+
+.menu ul {
+  font-size: 1em;
+}
+.menu li a.active, .menu li a:hover {
+  text-decoration: underline;
+}
+li.expanded {
+  list-style-image: url(images/menu-expanded.png);
+}
+li.collapsed {
+  list-style-image: url(images/menu-collapsed.png);
+}
+li.leaf {
+  list-style-image: url(images/menu-leaf.png);
+}
+
+/* Lists */
+
+.item-list h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.item-list ul {
+  font-size: 1em;
+}
+.node .content ul,
+.comment .content ul {
+  padding-left: 1.5em;
+}
+.node .content ol,
+.comment .content ol {
+  padding-left: 2em;
+}
+
+/* Messages */
+
+div.messages {
+  font-weight: bold;
+  padding: 0.3em;
+  margin: 0.5em 0;
+}
+div.messages ul {
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+div.status {
+  background: #dfd url(dialog-information.gif) no-repeat 4px 50%;
+  border: 1px solid #3a3;
+  color: #3a3;
+  padding: 10px 5px 10px 40px;
+}
+div.error {
+  background: #fdd url(dialog-warning.gif) no-repeat 4px 50%;
+  border: 1px solid #d77;
+  color: red;
+  padding: 10px 5px 10px 40px;
+}
+
+form-item input.error {
+  border: 1px solid red;
+  color: red;
+  background: #fff;
+}
+
+/* Pager styles */
+
+.pager {
+  padding: 0.5em 0 1em 0;
+}
+.item-list .pager li {
+  margin: 0;
+  padding: 0;
+}
+.pager a, .pager li.pager-current {
+  font-family: "Andale Mono", "Lucida Grande", Verdana, Arial, sans-serif;
+  padding: 0.2em 0.3em;
+  margin: 0 0.2em;
+  background: transparent url(images/opacity_g_75.png);
+  white-space: nowrap;
+  line-height: 2em;
+}
+.pager a:link,
+.pager a:visited {
+  color: #fff;
+}
+.pager a:hover {
+  text-decoration: none;
+  background: #fff;
+}
+.pager li.pager-current {
+  color: #fff;
+}
+
+/* Images */
+
+.block .xml-icon, .block .feed-icon {
+  display: block;
+  text-align: center;
+  padding: 0.5em 0;
+}
+#main .xml-icon, #main .feed-icon {
+  display: block;
+  text-align: right;
+  padding: 0.5em;
+}
+
+.node img.topic {
+  float: right;
+  clear: right;
+  margin: 10px 0 5px 5px;
+  border: 0;
+}
+
+.node .picture img, .comment .picture img {
+  float: right;
+  clear: right;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 0;
+}
+
+/* Misc */
+
+.breadcrumb {
+  padding-bottom: 0.5em;
+  text-align: left;
+  font-weight: bold;
+}
+#mission, #footer, .node .content, .comment .content {
+  line-height: 1.4;
+}
+.node {
+  margin-bottom: 2em;
+}
+.node .content, .comment .content {
+  margin: 0.5em 0;
+}
+#mission, .comment, .block, .box, .help {
+  margin-bottom: 1em;
+}
+
+/* CSS tricks */
+
+br.clear {
+  clear: both;
+  height: 0;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.strike {
+  text-decoration: line-through;
+}
+abbr, acronym, .hoverhelp {
+  border-bottom: 1px dotted #333;
+  cursor: help;
+}

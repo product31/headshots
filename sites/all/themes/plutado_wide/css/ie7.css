@@ -1,0 +1,108 @@
+#content-region-left {
+	margin-bottom: 0px;
+}
+
+#content-region-right {
+	margin-bottom: 0px;
+}
+
+#content-region-both {
+	margin-bottom: 0px;
+}
+
+#content-region-none {
+	margin-bottom: 0px;
+}
+
+#custom-login {
+	top: -10px; 
+}
+
+h2.content-title { /* ie7 */
+	margin: 5px 5px 20px 0px;
+}
+
+#logo-name {
+	position: relative;
+	top: 0px;	
+}
+
+#logo-name #site-name {
+	position: relative;
+	top: 20px;
+}
+
+.meta {
+	padding-bottom: 10px;
+}
+
+.node-content {
+	margin-top: 0px;
+}
+
+#primary .last { 
+	padding-top: 0px;
+}
+
+#site-slogan {
+	position: relative;
+	top: 0px;
+}
+
+#search-slogan {
+	position: relative;
+	top: 50px;
+}
+
+#secondary {
+	position: relative;
+	height: 0px;
+	top: -110px;
+	float: left;
+}
+
+#sidebar-left-region .block-header {
+	margin-bottom: -20px;
+}
+
+#sidebar-right-region .block-header {
+	margin-bottom: -20px;
+}
+
+#site-name a {
+	position: relative;
+	font-size: 15px !important;
+}
+
+#site-logo {
+	position: relative;
+	top: 22px;
+}
+
+span.submitted { /* ie7 */
+	position: relative;
+	top: 0px;
+}
+
+#search-button {
+	position: relative;
+	left: 0px;
+	top: -3px;
+	display: inline;
+}
+
+#search-field input {
+	text-indent: 25px;
+	padding-top: 13px;
+}	
+			
+#search-label {
+	position: relative;
+	top: -12px;
+	display: inline;
+	font-size: x-small;
+}
+
+ul.primary {
+	margin-top: 10px;
+}

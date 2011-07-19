@@ -1,0 +1,32 @@
+name = Simple Clean
+description = Tableless, two-column, fixed 960px width theme.
+core = 6.x
+engine = phptemplate
+
+; STYLESHEETS
+stylesheets[all][] = style.css
+
+; REGIONS
+regions[right] = Right sidebar
+regions[header] = Header
+regions[splash] = Splash
+regions[content] = Content
+regions[footer] = Footer
+
+; FEATURES
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+features[] = comment_user_picture
+features[] = node_user_picture
+; Information added by drupal.org packaging script on 2011-05-20
+version = "6.x-1.0"
+core = "6.x"
+project = "simpleclean"
+datestamp = "1305882716"
+

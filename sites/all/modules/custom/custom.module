@@ -1,0 +1,14 @@
+<?php
+// $Id: nodeblock.module,v 1.15 2010/01/06 16:46:58 tomot Exp $
+
+/**
+ * @file
+ * Enables use of specified node types as custom blocks.
+ */
+
+/**
+ * Implementation of hook_init.
+ */
+function custom_init() {
+  drupal_add_css('sites/all/themes/bluemasters/bluemasters.css');
+}

@@ -1,0 +1,13 @@
+; $Id: 
+
+name = Oxidation
+description = <a href="http://drupal.org/project/oxidation">Oxidation</a> was created by <a href="http://www.doncoryon.com">DonCoryon</a> and is based on a theme originally designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. Oxidation has a sleek industrial design with a beautiful golden color scheme. 
+core = 6.x
+engine = phptemplate
+
+; Information added by drupal.org packaging script on 2011-01-14
+version = "6.x-2.0"
+core = "6.x"
+project = "oxidation"
+datestamp = "1295037200"
+

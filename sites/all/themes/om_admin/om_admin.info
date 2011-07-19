@@ -1,0 +1,34 @@
+
+; name, description, screenshot, version - these are necessary for theme list
+name = OM Admin Theme
+description = "This a subtheme of OM base theme. For more, read the <a href="http://drupal.org/node/1068086">OM Admin Theme Documentation</a>"
+screenshot  = "screenshot.png"
+
+
+base theme = om
+
+; compatibilities
+core = "6.x"
+engine = phptemplate
+
+; default stylesheets
+
+stylesheets[all][] = "css/style.css"
+
+; jquery scripts
+scripts[] = "js/script.js"
+
+; default regions, on the left inside the brackets 
+; are the variable names used in "page.tpl.php",
+; on right side are the names necessary for blocks list
+
+regions[content] = Content
+
+
+
+; Information added by drupal.org packaging script on 2011-06-11
+version = "6.x-1.7"
+core = "6.x"
+project = "om_admin"
+datestamp = "1307797919"
+

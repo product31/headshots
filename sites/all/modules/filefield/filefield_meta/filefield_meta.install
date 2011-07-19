@@ -1,0 +1,25 @@
+<?php
+// $Id: filefield_meta.install,v 1.3 2008/06/28 06:57:07 jpetso Exp $
+/**
+ * @file
+ * FileField Meta: Add Video Support to File Field.
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function filefield_meta_install() {
+  db_query('CREATE TABLE {filefield_meta} (
+              fid INT UNSIGNED NOT NULL,
+              width INT UNSIGNED NOT NULL,
+              height INT unsigned NOT NULL,
+              duration FLOAT(53),
+              PRIMARY KEY (fid)
+            )
+          ');
+}
+
+function filefield_meta_uninstall() {
+  db_query('DROP TABLE IF EXISTS {filefield_meta_backup}');
+  db_query('ALTER TABLE {filefield_meta} RENAME TO {filefield_meta_bak}');
+}

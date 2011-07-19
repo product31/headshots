@@ -1,0 +1,21 @@
+Goofy Theme
+
+
+Author: Steven Wittens (UnConeD)
+E-mail: unconed@drop.org
+Description: Colourful, graphical, orange theme for high-resolutions
+
+Updated by:
+
+Drupal 4.1
+  Dries Buytaert (dries)
+Drupal 4.2
+  Alastair Maw (al)
+Drupal 4.3 to 4.6
+  Tom Dobes (TDobes)
+Drupal 4.7
+  Tim Maks van den Broek (Mad Maks)
+  Hans J. Sieghart (Mordio)
+  Tom Dobes (TDobes)
+Drupal 6
+  Frederic G. Marand (fgm)

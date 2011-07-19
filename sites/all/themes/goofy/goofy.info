@@ -1,0 +1,49 @@
+;
+; Goofy port for Drupal 6
+;
+; @see http://drupal.org/project/goofy
+; From the project page:
+; PHP-based theme by Steven Wittens (UnConeD) - "Colourful, graphical, orange theme for high-resolutions."
+
+name = Goofy
+description = Colourful, graphical, orange theme for high-resolutions. <br />Distributed with Drupal core 3.0 to 4.1.
+;screenshot = screenshot.png
+core = 6.x
+
+; Goofy is a plain PHP theme
+engine = phptemplate
+
+; Goofy only has two regions
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+
+features[] = logo
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = mission
+features[] = slogan
+
+; Goofy does not implement the following features
+;features[] = name
+;features[] = search
+;Goofy only includes primary links, no secondary
+features[] = primary_links
+;features[] = secondary_links
+
+; Goofy only uses the implicit stylesheet
+stylesheets[all][] = style.css
+stylesheets[all][] = table.css
+
+; Goofy does not use JS
+;scripts[] = script.js
+
+; Actually, it probably does not even require PHP5
+php = DRUPAL_MINIMUM_PHP
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-2.x-dev"
+core = "6.x"
+project = "goofy"
+datestamp = "1298619346"
+

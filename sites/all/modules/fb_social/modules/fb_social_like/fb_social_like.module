@@ -1,0 +1,246 @@
+<?php
+
+/**
+ * Implementation of hook fb_social_plugins_info
+ */
+function fb_social_like_fb_social_plugins_info(){
+  $info = array();
+  $info['like'] = array(
+      'name' => 'like', 
+      'description' => 'Like button' 
+  );
+  
+  return $info;
+}
+
+/**
+ * Implementation of hook init
+ * @todo og:image (http://developers.facebook.com/docs/reference/plugins/like)
+ * 
+ */
+function fb_social_like_init(){
+  $object = menu_get_object();
+  if (! $object->nid) {
+    return;
+  }
+  
+  $presets = fb_social_enabled_presets('like');
+  foreach ( $presets as $preset ) {
+    if ($preset->settings['opengraph_tags'] && fb_social_like_type($preset, $object->type)) {
+      $tags = TRUE;
+    }
+  }
+  if ($tags) {
+    //add fbml header meta information 
+    $data = '<meta property="og:title" content="' . check_plain($object->title) . '"/>' . "\n";
+    $data .= '<meta property="og:site_name" content="' . variable_get('site_name', '') . '"/>' . "\n";
+    // @todo maybe look for images/imagefields uploaded/attached to the node ?
+    // $data .= '<meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>';
+    drupal_set_html_head($data);
+  
+  }
+}
+
+/**
+ * Implements hook_fb_social_default_presets
+ */
+function fb_social_like_fb_social_default_presets(){
+  $export = array();
+  $fb_social_preset = new stdClass();
+  $fb_social_preset->disabled = FALSE; /* Edit this to true to make a default fb_social_preset disabled initially */
+  $fb_social_preset->api_version = 1;
+  $fb_social_preset->name = 'fb_like_default';
+  $fb_social_preset->description = 'the default ';
+  $fb_social_preset->plugin_type = 'like';
+  $fb_social_preset->settings = array(
+      'node_types' => array(
+          'types' => array(
+              'article' => 0, 
+              'page' => 0, 
+              'poll' => 0 
+          ) 
+      ), 
+      'opengraph_tags' => 1, 
+      'plugin_location' => array(
+          'location' => '0', 
+          'display_teasers' => 1 
+      ), 
+      'block' => 0 
+  );
+  $fb_social_preset->fb_attrs = array(
+      'layout' => 'button_count', 
+      'show_faces' => 0, 
+      'width' => '350', 
+      'action' => 'like', 
+      'font' => 'verdana', 
+      'colorscheme' => 'dark' 
+  );
+  
+  $export['fb_like_default'] = $fb_social_preset;
+  
+  return $export;
+}
+
+/**
+ * Implementation of hook_block
+ */
+function fb_social_like_block($op = 'list', $delta = 0, $edit = array()){
+  // load all presets
+  $presets = fb_social_enabled_presets('like');
+  
+  if ($op == 'list') {
+    foreach ( $presets as $preset ) {
+      if ($preset->settings['block']) {
+        $blocks[$preset->name] = array(
+            'info' => $preset->name . ' block' 
+        );
+      }
+    }
+    return $blocks;
+  }
+  
+  else if ($op == 'view') {
+    $block['subject'] = t('');
+    $preset = fb_social_preset_load($name = $delta, $reset = FALSE);
+    $url = fb_social_url($_GET['q']);
+    $block['content'] = theme('fb_social_preset', $preset, array(
+        'href' => $url 
+    ));
+    return $block;
+  }
+}
+
+/**
+ * Implementation of hook_content_extra_fields.
+ */
+function fb_social_like_content_extra_fields($type_name){
+  $presets = fb_social_enabled_presets('like');
+  foreach ( $presets as $preset ) {
+    if (fb_social_like_type($preset, $type_name) && $preset->settings['plugin_location']['location']) {
+      $extras['fb_social_like_' . $preset->name] = array(
+          'label' => t('Facebook social:  like plugin'), 
+          'description' => t('The "like" plugin field from ' . $preset->name . ' preset'), 
+          'weight' => - 10 
+      );
+      return $extras;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function fb_social_like_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
+  switch ($op) {
+    case 'view' :
+    $presets = fb_social_enabled_presets('like');
+      foreach ( $presets as $preset ) {
+        if ($node->status && fb_social_like_type($preset, $node->type) && $preset->settings['plugin_location']['location']) {
+          if ($a4 || $preset->settings['plugin_location']['display_teasers'] && $a3) {
+            $output = theme('fb_social_preset', $preset, array(
+                'href' => fb_social_url('node/' . $node->nid) 
+            ));
+            $weight = (module_exists('content')) ? content_extra_field_weight($node->type, 'fb_social_like_' . $preset->name) : - 10;
+            $node->content['fb_social_like_' . $preset->name] = array(
+                '#weight' => $weight, 
+                '#value' => $output 
+            );
+          }
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Implementation of hook_link
+ */
+function fb_social_like_link($type, $object, $teaser = FALSE){
+  $presets = fb_social_enabled_presets('like');
+  foreach ( $presets as $preset ) {
+    //only nodes are supported
+    if ('node' != $type) {
+      continue;
+    }
+    
+    // dont like unpublished nodes
+    if (! $object->status) {
+      continue;
+    }
+    
+    // if no plugin on teasers continue
+    if ($teaser && ! $preset->settings['plugin_location']['display_teasers']) {
+      continue;
+    }
+    
+    // plugin is not to be displayed in the node links. continue
+    if ($preset->settings['plugin_location']['location']) {
+      continue;
+    }
+    
+    // good to go
+    $links = array();
+    if ($type == 'node' && fb_social_like_type($preset, $object->type)) {
+      $links['fb_social_like_' . $preset->name] = array(
+          'title' => theme('fb_social_preset', $preset, array(
+              'href' => fb_social_url('node/' . $object->nid) 
+          )), 
+          'html' => TRUE 
+      );
+    }
+    
+    return $links;
+  }
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function fb_social_like_ctools_plugin_api($module, $api){
+  if ($module == 'boxes' && $api == 'plugins') {
+    return array(
+        'version' => 1 
+    );
+  }
+}
+
+/**
+ * Implementation of hook_boxes_plugins().
+ */
+function fb_social_like_boxes_plugins(){
+  $info = array();
+  
+  $info['fb_social_like_boxes_like'] = array(
+      'title' => 'facebook social like', 
+      'handler' => array(
+          'class' => 'fb_social_like_box', 
+          'file' => 'fb_social_like_boxes.inc', 
+          'path' => drupal_get_path('module', 'fb_social_like'), 
+          'parent' => 'fb_social_boxes_default' 
+      ) 
+  );
+  
+  return $info;
+}
+
+/**
+ * Does $preset should be shown on node of type $type
+ */
+function fb_social_like_type($preset, $type){
+  $types = ($preset->settings['node_types']['types']);
+  if (! is_array($types)) {
+    return FALSE;
+  }
+  
+  return in_array($type, array_values($types));
+}
+
+
+/**
+ * Implementation of hook_views_api().
+ */
+function fb_social_like_views_api() {
+  return array(
+    'api' => '2.0',
+  );
+}

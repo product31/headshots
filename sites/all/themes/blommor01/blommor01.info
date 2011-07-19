@@ -1,0 +1,23 @@
+; $Id: blommor01.info,v 1.1 2008/09/12 18:48:38 frjo Exp $
+name = Blommor01
+description = A two column blog theme designed by Masumi Hirose.
+core = 6.x
+engine = phptemplate
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content_top] = Content top
+regions[content_bottom] = Content bottom
+regions[header] = Header
+regions[footer] = Footer
+stylesheets[all][]   = style.css
+stylesheets[all][]   = layout.css
+stylesheets[all][]   = modules.css
+stylesheets[all][]   = blommor.css
+stylesheets[print][] = print.css
+
+; Information added by drupal.org packaging script on 2009-04-21
+version = "6.x-1.0"
+core = "6.x"
+project = "blommor01"
+datestamp = "1240300866"
+

@@ -1,0 +1,409 @@
+/* 
+	project: Internet Jobs Template
+	author: Luka Cvrk (www.solucija.com)
+	Stylesheet
+*/
+
+a {
+	background-color: inherit;
+	color: #3C6491;
+}
+
+a:hover {
+	background-color: inherit;
+	color: #BF3E17;
+}
+
+body {
+	background: url(images/header.gif) #EEEEEE repeat-x top left;
+	color: #000000;
+	font: 0.7em "Arial", Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+}
+
+form.search {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font: 160% Arial, Sans-Serif;
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 0 0 0;
+}
+
+h1 a {
+	background: inherit;
+	color: #BF3E17;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	background: inherit;
+	color: #3C6491;
+	text-decoration: none;
+}
+
+h2 {
+	background-color: inherit;
+	color: #808080;
+	font-size: 1.4em;
+	letter-spacing: -1px;
+	margin: 8px 0 5px 0;
+	padding: 0;
+}
+
+h2 a {
+	background-color: inherit;
+	background-image: url(images/h2bg.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	color: #000000;
+	padding: 0 0 0 20px;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	background: url(images/h2bghover.gif) no-repeat center left;
+}
+
+img {
+	border: 0;
+}
+
+#block-search-0 h2 {
+  display: none;
+}
+#right .content {
+  border: none;
+  background: none;
+}
+.search-form input.form-submit {
+	background: none;
+	background: #808080;
+	border: none;
+	color: #FFFFFF;
+	font-family: Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 0 0 3px;
+}
+.search-form {
+	background: #808080;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 5px 8px 5px 18px;
+}
+.search-form .form-item {
+	margin: 0;
+	padding: 0;
+}
+.search-form input.form-text {
+	background: #D8D8D8;
+	border: 1px solid #EEEEEE;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	width: 128px;
+}
+
+input.text:hover {
+	background: #EEEEEE;
+	border: 1px solid #FFFFFF;
+	color: #000000;
+}
+
+#user-login-form {
+	background: #EEEEEE;
+	color: #808080;
+	border: 1px solid #808080;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 8px 5px 18px;
+}
+#user-login-form .form-item {
+	margin: 0;
+	padding: 0;
+}
+#user-login-form input.form-text {
+	background: #D8D8D8;
+	border: 1px solid #808080;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	width: 128px;
+}
+#user-login-form input.form-submit {
+	font-family: Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+input.button {
+	background: none;
+	background: #808080;
+	border: none;
+	color: #FFFFFF;
+	font-family: Arial, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 0 0 3px;
+}
+
+input.text {
+	background: #D8D8D8;
+	border: 1px solid #EEEEEE;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	width: 128px;
+}
+
+input.text:hover {
+	background: #EEEEEE;
+	border: 1px solid #FFFFFF;
+	color: #000000;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	background: url(images/contentbg.gif) #FFFFFF repeat-x left top;
+	border-top: 1px solid #FEFEFE;
+	color: #000000;
+}
+
+.links {
+	background: url(images/horizontaldotted.gif) #FFFFFF repeat-x bottom left;
+	color: #808080;
+	margin: 5px 0 5px 0;
+	padding: 10px 5px 5px 0;
+	text-align: right;
+}
+
+.links a {
+	background: #FFFFFF;
+	color: #808080;
+}
+.links img {
+	margin: 0px 2px 0px 0;
+}
+.rightarticle {
+	background: #EEEEEE;
+	color: #808080;
+	line-height: 1.4em;
+	margin: 2px 0 2px 0;
+	padding: 8px;
+}
+
+.rightarticle_ad {
+	background: url(images/seoad.jpg) #FFFFFF no-repeat;
+	border: 2px solid #EEEEEE;
+	color: #808080;
+	font: 140% Arial, Sans-Serif;
+	font-weight: bold;
+	height: 17px;
+	margin: 2px 0 2px 0;
+	padding: 17px;
+	width: 182px;
+}
+
+.rightarticle_ad a {
+	background: transparent;
+	text-decoration: none;
+}
+
+.slogan {
+	border-left: 1px solid #CCCCCC;
+	float: left;
+	margin: 0 0 0 20px;
+	padding: 10px 0 0 20px;
+}
+#block-user-1 .title{
+  display: none;
+}
+#additional {
+	background-color: #FFFFFF;
+	clear: both;
+	color: #000000;
+	margin: 0 auto;
+	padding: 10px;
+	width: 730px;
+}
+
+#articles {
+	margin: 0 auto 10px auto;
+	padding: 3px 0 0 10px;
+	width: 740px;
+}
+#articles h1 {
+	background-color: inherit;
+	background-image: url(images/h2bg.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	color: #000000;
+	padding: 0 0 0 20px;
+	text-decoration: none;
+}
+#footer {
+	margin: 0;
+	padding: 0 0px 0 0px;
+	width: 740px;
+}
+
+#footer a {
+	background: inherit;
+	color: #808080;
+}
+
+#footer p {
+	background: #EEEEEE;
+	color: #808080;
+	line-height: 1.8em;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#header {
+	clear: both;
+	height: 45px;
+	margin: 0 auto;
+	width: 750px;
+}
+
+#hmenu {
+	float: right;
+	padding: 13px 0 5px 0;
+}
+
+#hmenu a {
+	background: url(images/hmenuarrow.gif) #CCCCCC no-repeat top center;
+	border-bottom: 4px solid #BCBCBC;
+	color: #414141;
+	margin: 0 0 3px -2px;
+	padding: 12px 13px 2px 11px;
+	text-decoration: none;
+}
+
+#hmenu a:hover {
+	background: url(images/hmenuarrowhover.gif) #3C6491 no-repeat top center;
+	border-bottom: 4px solid #2F4A6C;
+	color: #FFFFFF;
+}
+
+#left {
+	float: left;
+	padding: 0 10px 0 0;
+	width: 490px;
+}
+
+#links {
+	background: url(images/linksbg.gif) #3C6491 repeat-x top left;
+	clear: both;
+	color: #FFFFFF;
+	margin: 0 auto;
+	padding: 10px;
+	width: 720px;
+}
+
+#logo {
+	background: inherit;
+	color: #000000;
+	float: left;
+	padding: 10px 0 0 0px;
+	width: 300px;
+}
+
+#right {
+	float: left;
+	width: 220px;
+}
+
+ul.menu-tree {
+	margin: 0;
+	padding: 0;
+}
+ul.menu-tree li li {
+	margin-left: 15px;
+}
+ul.menu-tree li li li {
+	margin-left: 30px;
+}
+.menu-tree a:link, .menu-tree a:visited {
+	background: url(images/vmenuarrow.gif) #BF3E18 no-repeat center left;
+	color: #FFFFFF;
+	display: block;
+	margin: 0 0 1px 0;
+	padding: 5px 0 5px 19px;
+	text-decoration: none;
+  text-transform: capitalize;
+}
+.menu-tree a:hover {
+	background: url(images/vmenuarrowhover.gif) #822C0F no-repeat center left;
+	color: #FFFFFF;
+}
+.menu-tree li {
+	list-style-type: none;
+}
+#searchform {
+	background: #808080;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 5px 8px 5px 18px;
+}
+
+#whiteline {
+	border-top: 3px solid #FFFFFF;
+	margin-top: 10px;
+}
+
+.calendar {
+	background: #EEEEEE;
+	color: #808080;
+	line-height: .8em;
+	margin: 0px 0 0px 0;
+	padding: 6px;
+	border: 1px solid #808080;
+}
+.calendar caption {
+	border-bottom: 1px solid #808080;
+	padding: 2px;
+}
+.calendar table {
+	width: 100%;
+  border: 0px;
+}
+.calendar table td {
+	color: #808080;
+	text-align: center;
+}
+.calendar a:link, .calendar a:visited {
+	color: #808080;
+	font-weight: bold;
+	text-decoration: none;
+}
+.calendar a:hover {
+	color: #808080;
+}
+.calendar table thead {
+	font-size: 9px;
+}
+.calendar td, .calendar th {
+  text-align: center;
+  border: 0px;
+  padding: 2px;
+  margin: 0;
+	font-size: 9px;
+}
+div.dashboard-panel-head {
+	background-color: #808080;
+	color: #FFFFFF;
+	font-weight: bold;
+}

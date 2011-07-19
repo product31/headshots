@@ -1,0 +1,19 @@
+name = Blossom
+description = Tableless, two-column, fixed width theme.
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = style.css
+
+; Information added by drupal.org packaging script on 2008-11-11
+version = "6.4"
+project = "drupal"
+datestamp = "1218672610"
+
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "blossom"
+datestamp = "1298618896"
+

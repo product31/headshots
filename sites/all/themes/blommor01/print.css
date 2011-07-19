@@ -1,0 +1,51 @@
+/* $Id: print.css,v 1.1 2008/02/09 21:36:21 frjo Exp $ */
+
+#top-nav, 
+#top-nav2, 
+#logo, 
+#login-box, 
+#search, 
+.sidebar, 
+.tabs, 
+#comment_controls, 
+#comment_form, 
+.node .links, 
+.comment .links, 
+.pager {
+  display: none;
+}
+
+#content-both, 
+#content-left, 
+#content-right, 
+#content-none {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a:link, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+body, 
+.node, 
+.comment, 
+#header, 
+#mission, 
+#footer, 
+.sticky {
+  border: 0;
+  color: #000;
+  background: transparent;
+}
+
+.node h2.title { border: 0;
+  color: #000;
+  background: transparent;
+  margin: 0;
+}
+
+.terms {
+  float: none;
+}
